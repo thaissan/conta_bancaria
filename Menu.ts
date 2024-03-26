@@ -1,9 +1,15 @@
 import readlinesync = require("readline-sync");
 import { colors } from './src/util/Colors';
+import { Conta } from "./src/util/model/Conta";
 
 export function main() {
 
     let opcao: number;
+
+    let c1: Conta = new Conta(1, 123, 1, "Thais", 1000000)
+    c1.visualizar();
+
+    //set altera
 
     while(true){
 
