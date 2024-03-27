@@ -18,7 +18,7 @@ export class Conta{
      * Getter numero
      * @return {number}
      */
-	public get_numero(): number {
+	public get numero(): number {
 		return this._numero;
 	}
 
@@ -26,7 +26,7 @@ export class Conta{
      * Getter agencia
      * @return {number}
      */
-	public get_agencia(): number {
+	public get agencia(): number {
 		return this._agencia;
 	}
 
@@ -34,7 +34,7 @@ export class Conta{
      * Getter tipo
      * @return {number}
      */
-	public get_tipo(): number {
+	public get tipo(): number {
 		return this._tipo;
 	}
 
@@ -42,7 +42,7 @@ export class Conta{
      * Getter titular
      * @return {string}
      */
-	public get_titular(): string {
+	public get titular(): string {
 		return this._titular;
 	}
 
@@ -50,53 +50,53 @@ export class Conta{
      * Getter saldo
      * @return {number}
      */
-	public get_saldo(): number {
+	public get saldo(): number {
 		return this._saldo;
 	}
 
     /**
      * Setter numero
-     * @param {number} value
+     * @param {number} numero
      */
-	public set_numero(value: number) {
-		this._numero = value;
+	public set numero(numero: number) {
+		this._numero = numero;
 	}
 
     /**
      * Setter agencia
-     * @param {number} value
+     * @param {number} agencia
      */
-	public set_agencia(value: number) {
-		this._agencia = value;
+	public set agencia(agencia: number) {
+		this._agencia = agencia;
 	}
 
     /**
      * Setter tipo
-     * @param {number} value
+     * @param {number} tipo
      */
-	public set_tipo(value: number) {
-		this._tipo = value;
+	public set tipo(tipo: number) {
+		this._tipo = tipo;
 	}
 
     /**
      * Setter titular
-     * @param {string} value
+     * @param {string} titular
      */
-	public set_titular(value: string) {
-		this._titular = value;
+	public set titular(titular: string) {
+		this._titular = titular;
 	}
 
     /**
      * Setter saldo
-     * @param {number} value
+     * @param {number} saldo
      */
-	public set_saldo(value: number) {
-		this._saldo = value;
+	public set saldo(saldo: number) {
+		this._saldo = saldo;
 	}
 
     public sacar(valor: number): boolean{
         if(this._saldo >= valor){
-            this._saldo(this._saldo - valor)
+            this._saldo = this._saldo - valor;
             return true;
         }
         console.log("Saldo é insuficiente!");
@@ -105,7 +105,7 @@ export class Conta{
     }
 
     public depositar(valor: number): void{
-        this._saldo(this._saldo)
+        this._saldo = this._saldo + valor;
     }
 
 
@@ -124,14 +124,14 @@ export class Conta{
 
 
 
-        console.log("***********************************************")
+        console.log("\n\n***********************************************")
         console.log("Dados da conta")
         console.log("***********************************************")
         console.log(`Numero da conta: ${this._numero}`)
         console.log(`Numero da agencia: ${this._agencia}`)
-        console.log(`Tipo da conta: ${this._tipo}`)
+        console.log(`Tipo da conta: ${tipo}`)
         console.log(`Titular da conta: ${this._titular}`)
-        console.log(`Saldo da conta: ${this._saldo}`)
+        console.log(`Saldo da conta: ${this._saldo.toFixed(2)}`)
     }
 		
 }
