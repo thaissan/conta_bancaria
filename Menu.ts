@@ -8,12 +8,12 @@ export function main() {
 
     let opcao: number;
 
-    let c1: Conta = new Conta(1, 123, 1, "Thais", 1000000000)
-    c1.visualizar(); 
-    c1.sacar(10500);
-    c1.visualizar();
-    c1.depositar(5000);
-    c1.visualizar();
+    // let c1: Conta = new Conta(1, 123, 1, "Thais", 1000000000)
+    // c1.visualizar(); 
+    // c1.sacar(10500);
+    // c1.visualizar();
+    // c1.depositar(5000);
+    // c1.visualizar();
 
     const cc: ContaCorrente = new ContaCorrente(2, 1456, 1, "Thais", 15000, 1000);
     cc.visualizar();
