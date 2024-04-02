@@ -86,12 +86,12 @@ export function main() {
                 console.log('Informe o tipo da conta: ')
                 tipo = readlinesync.keyInSelect(tipoContas, "", {cancel: false}) + 1
 
-                console.log('Digite o saldo da conta: ')
+                console.log('Digite o saldo da conta: R$  ')
                 saldo = readlinesync.questionFloat("")
 
                 switch(tipo){
                     case 1:
-                console.log('Digite o saldo da conta: ')
+                console.log('Digite o limite da conta R$: ')
                 limite = readlinesync.questionFloat("")
                 contas.cadastrar(
                     new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite)
@@ -145,12 +145,12 @@ export function main() {
 
                 tipo = conta.tipo
 
-                console.log('Digite o saldo da conta: ')
+                console.log('Digite o saldo da conta: R$ ')
                 saldo = readlinesync.questionFloat("")
 
                 switch(tipo){
                     case 1:
-                console.log('Digite o saldo da conta: ')
+                console.log('Digite o limite da conta: R$')
                 limite = readlinesync.questionFloat("")
                 contas.atualizar(
                     new ContaCorrente(numero, agencia, tipo, titular, saldo, limite)
